@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replicaset
+spec:
+  template:
+    metadata:
+      name: nginx-replicaset
+      labels:
+        app: nginx-replicaset
+    spec:
+      containers:
+      - name: nginx-replicaset
+        image: nginx
+        ports:
+        - containerPort: 80
+  replicas: 0: #유지할 파드의 수도
+  selector: #관리할 파드의레이블, 하위 설정을 기준으로 레이블을 판단한다.
+    matchLabels:
+      app: nginx-replicaset
