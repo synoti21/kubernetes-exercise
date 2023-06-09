@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-nginx
+spec:
+  ports:
+    - name: svc-nginx
+      port: 9000
+      targetPort: 80
+  selector:
+    app: deploy-nginx11

@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-nginx11
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deploy-nginx11
+  template:
+    metadata:
+      labels:
+        app: deploy-nginx11
+    spec:
+      containers:
+      - name: deploy-nginx11
+        image: nginx:1.11
