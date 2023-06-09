@@ -1,4 +1,4 @@
-# Kubernetes-Exercise
+# Introduction of Kubernetes
 Files needed for exercising Kubernetes.
 
 Click the link below to see the introduction of Kubernetes I've written.
